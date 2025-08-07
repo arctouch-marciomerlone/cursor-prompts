@@ -58,16 +58,55 @@ This repository contains three specialized AI assistant prompts that work togeth
 
 ### Prerequisites
 
-- AI assistant that supports custom prompts (Claude, ChatGPT, etc.)
+- **Cursor IDE** with AI chat functionality
 - Git repository
 - Development environment (Node.js recommended for build/lint commands)
 
+### Setting Up Modes in Cursor
+
+The AI Task Management Assistant prompts are designed to work seamlessly with Cursor's AI chat. Here's how to set up and use each mode:
+
+#### 1. **Task Init Mode Setup**
+
+![Task Init Setup](assets/Screenshot%202025-08-07%20at%202.27.26%20PM.png)
+
+1. Open Cursor's AI chat panel
+2. Copy the entire content of `task-init-assistant.txt`
+3. Paste it as your system prompt or initial message
+4. Provide your task details (code, description, base branch)
+
+#### 2. **Code Review Mode Setup**
+
+![Code Review Setup](assets/Screenshot%202025-08-07%20at%202.27.33%20PM.png)
+
+1. Switch to a new chat session in Cursor
+2. Load the `code-review.txt` prompt content
+3. Provide branch names, PR URL, or let it auto-detect current branch
+4. The assistant will analyze your code changes comprehensively
+
+#### 3. **Task Wrapper Mode Setup**
+
+![Task Wrapper Setup](assets/Screenshot%202025-08-07%20at%202.27.39%20PM.png)
+
+1. Open a fresh chat session for final documentation
+2. Use the `task-wrapper.txt` prompt
+3. Input your task code and description
+4. Get complete PR documentation with semantic commits
+
+#### 4. **Mode Integration in Action**
+
+![Mode Integration](assets/Screenshot%202025-08-07%20at%203.33.21%20PM.png)
+
+The assistants work together seamlessly - task init creates plans, code review validates quality, and task wrapper generates final documentation.
+
 ### Basic Workflow
+
+![Workflow Overview](assets/Screenshot%202025-08-07%20at%203.35.29%20PM.png)
 
 1. **Initialize Task**
 
    ```
-   Use: task-init-assistant.txt
+   Use: task-init-assistant.txt in Cursor
    Input: Task code, description, optional base branch
    Output: PLAN-{TASK-CODE}.md + feature branch
    ```
@@ -82,17 +121,35 @@ This repository contains three specialized AI assistant prompts that work togeth
 3. **Review Code**
 
    ```
-   Use: code-review.txt
+   Use: code-review.txt in new Cursor session
    Input: Branch names or PR URL
    Output: REVIEW-{TASK-CODE}.md
    ```
 
 4. **Finalize Task**
    ```
-   Use: task-wrapper.txt
+   Use: task-wrapper.txt in new Cursor session
    Input: Task code and description
    Output: PR-{TASK-CODE}.md + commit strategy
    ```
+
+### Advanced Cursor Integration
+
+![Advanced Integration](assets/Screenshot%202025-08-07%20at%203.36.15%20PM.png)
+
+#### **Smart Context Switching**
+
+- Use separate chat sessions for each mode to maintain context isolation
+- Cursor automatically detects your current repository and branch context
+- The assistants leverage Cursor's file understanding for better analysis
+
+#### **Automated File Operations**
+
+![File Operations](assets/Screenshot%202025-08-07%20at%203.36.48%20PM.png)
+
+- All assistants use absolute paths for safe file creation
+- Generated files appear directly in your project structure
+- Cursor's file explorer shows the new documentation files immediately
 
 ## 📖 Detailed Usage
 
@@ -335,35 +392,89 @@ When modifying prompts:
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## 🔧 Cursor-Specific Setup
+
+### Setting Up Custom Prompts in Cursor
+
+1. **Method 1: Direct Paste**
+
+   - Open Cursor's AI chat panel (Cmd/Ctrl + L)
+   - Copy the full prompt content from the `.txt` files
+   - Paste directly into the chat input
+   - The assistant will automatically enter the specified mode
+
+2. **Method 2: File Reference**
+
+   - Save the prompt files in your project directory
+   - Reference them in Cursor: `@task-init-assistant.txt [your task details]`
+   - Cursor will load the prompt content and apply it
+
+3. **Method 3: Cursor Rules (Recommended)**
+   - Add prompt files to your `.cursorrules` for persistent setup
+   - Cursor will automatically apply context-aware assistance
+   - Perfect for team environments with consistent workflows
+
+### Best Practices for Cursor Integration
+
+- **Use separate chat sessions** for each mode to prevent context contamination
+- **Enable file context** so assistants can read your codebase structure
+- **Keep prompts updated** in your project for version control
+- **Use absolute paths** when the assistant creates files for reliability
+
 ## 🆘 Troubleshooting
 
 ### Common Issues
 
 **"Wrong project directory"**
 
-- Ensure you're in the correct repository
-- Confirm working directory with `pwd`
+- Ensure you're in the correct repository in Cursor
+- Confirm working directory with `pwd` in Cursor's terminal
+- Check that Cursor has opened the right project folder
 
 **"Branch already exists"**
 
-- Check existing branches with `git branch -a`
-- Use different descriptive names
+- Check existing branches with `git branch -a` in Cursor terminal
+- Use different descriptive names in your task description
+- The assistant will suggest alternative names
 
 **"Build/lint failures"**
 
-- Address issues before proceeding
-- Check tool availability (`npm`, `eslint`, etc.)
+- Address issues before proceeding with task wrapper
+- Check tool availability (`npm`, `eslint`, etc.) in Cursor terminal
+- Use Cursor's integrated terminal for dependency management
 
 **"File overwrite warnings"**
 
-- Different task codes prevent conflicts
-- Confirm task code accuracy
+- Different task codes prevent conflicts automatically
+- Confirm task code accuracy in your input
+- Cursor's file explorer will show existing files to avoid conflicts
+
+**"Mode not recognized"**
+
+- Ensure you're using a fresh chat session for each mode
+- Copy the complete prompt content, including mode indicators
+- Verify the prompt file content matches the expected format
+
+### Cursor-Specific Troubleshooting
+
+**"Assistant not following prompt"**
+
+- Clear Cursor's chat history and restart with the full prompt
+- Ensure you're in a project directory (not just a folder)
+- Check that Cursor has proper file system access
+
+**"Files not created in correct location"**
+
+- Verify Cursor is opened in the project root directory
+- Check absolute path generation in the assistant's responses
+- Ensure proper file permissions in your project directory
 
 ### Support
 
 For issues or questions:
 
-1. Check the prompt documentation
-2. Verify input format requirements
-3. Ensure proper mode enforcement
-4. Review error prevention guidelines
+1. Check the prompt documentation and mode indicators
+2. Verify input format requirements match the examples
+3. Ensure proper mode enforcement is being followed
+4. Review error prevention guidelines in each prompt
+5. Use Cursor's integrated terminal for git operations verification
