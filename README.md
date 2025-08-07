@@ -68,7 +68,9 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 1. **Task Init Mode Setup**
 
-![Task Init Setup](assets/task-init-setup.png)
+![Sample Task Init Input](assets/sample-task-init-input.png)
+
+_Example input format for task initialization showing task code, description, and setup requirements_
 
 1. Open Cursor's AI chat panel
 2. Copy the entire content of `task-init-assistant.txt`
@@ -77,7 +79,9 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 2. **Code Review Mode Setup**
 
-![Code Review Setup](assets/code-review-setup.png)
+![Cursor Mode Settings](assets/cursor-mode-settings-cr-assistant.png)
+
+_Example of configuring the Code Review Assistant mode in Cursor's settings_
 
 1. Switch to a new chat session in Cursor
 2. Load the `code-review.txt` prompt content
@@ -86,7 +90,9 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 3. **Task Wrapper Mode Setup**
 
-![Task Wrapper Setup](assets/task-wrapper-setup.png)
+![Cursor Modes Overview](assets/cursor-modes.png)
+
+_Overview of available modes in Cursor for different development workflows_
 
 1. Open a fresh chat session for final documentation
 2. Use the `task-wrapper.txt` prompt
@@ -95,13 +101,19 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 4. **Mode Integration in Action**
 
-![Mode Integration](assets/Screenshot%202025-08-07%20at%203.33.21%20PM.png)
+![Cursor New Mode Setup](assets/cursor-new-mode.png)
+
+_Setting up a new custom mode in Cursor for task management workflows_
 
 The assistants work together seamlessly - task init creates plans, code review validates quality, and task wrapper generates final documentation.
 
 ### Basic Workflow
 
-![Workflow Overview](assets/workflow-overview.png)
+The following images show real examples of how the Task Wrapper Assistant generates comprehensive documentation:
+
+![Sample Task Wrapper Output - Part 1](assets/sample-output-task-wrap-1.png)
+
+_Part 1: Task Wrapper Assistant output showing PR documentation generation with git strategy_
 
 1. **Initialize Task**
 
@@ -135,7 +147,15 @@ The assistants work together seamlessly - task init creates plans, code review v
 
 ### Advanced Cursor Integration
 
-![Advanced Integration](assets/automated-file-operations.png)
+#### **Task Wrapper Output Examples**
+
+![Sample Task Wrapper Output - Part 2](assets/sample-output-task-wrap-2.png)
+
+_Part 2: Detailed commit strategy and validation checklist generation_
+
+![Sample Task Wrapper Output - Part 3](assets/sample-output-task-wrap-3.png)
+
+_Part 3: Complete task documentation workflow showing PR description and additional notes_
 
 #### **Smart Context Switching**
 
@@ -145,7 +165,7 @@ The assistants work together seamlessly - task init creates plans, code review v
 
 #### **Automated File Operations**
 
-![File Operations](assets/mode-integration.png)
+![Prompt Integration Demo](assets/prompt-integration-demo.png)
 
 - All assistants use absolute paths for safe file creation
 - Generated files appear directly in your project structure
