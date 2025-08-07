@@ -434,12 +434,69 @@ This project is licensed under the MIT License - see the LICENSE file for detail
    - Cursor will automatically apply context-aware assistance
    - Perfect for team environments with consistent workflows
 
+### Setting Up Custom Modes in Cursor (Recommended)
+
+Create dedicated Custom Modes for each assistant to ensure proper tool restrictions and guardrails. Reference: [Cursor Docs: Modes](https://docs.cursor.com/en/agent/modes)
+
+#### Step-by-Step Custom Mode Setup
+
+1. **Enable Custom Modes**
+
+   - Open Cursor Settings → Chat → Custom Modes
+   - Toggle "Enable Custom Modes" (beta feature)
+
+2. **Create New Mode**
+
+   - Click "New Mode"
+   - Set Name, Color/Emoji (optional), and AI Model
+   - Configure tools based on the mode's purpose (see configurations below)
+
+3. **Add System Instructions**
+
+   - Paste the corresponding prompt content from this repository
+   - Include mode-specific guardrails in the instructions
+
+4. **Save and Use**
+   - Save the mode and optionally assign keyboard shortcuts
+   - Switch modes via picker dropdown or Ctrl+. shortcut
+   - Start fresh chat sessions for each mode
+
+#### Recommended Custom Mode Configurations
+
+**Task Init Assistant Mode**
+
+- **Tools**: Codebase Search, Read File, Terminal
+- **Restrictions**: Edit tools disabled by default
+- **Guardrails**: Planning only, no code modifications, absolute paths required
+- **Output**: PLAN-{TASK-CODE}.md files
+
+**Code Review Assistant Mode**
+
+- **Tools**: Codebase Search, Read File, Terminal
+- **Restrictions**: Edit tools disabled
+- **Guardrails**: Read-only analysis, use built-in @code-review when needed
+- **Integration**: `@code-review [branches]` or `@code-review [PR_URL]`
+
+**Task Wrap Assistant Mode**
+
+- **Tools**: Codebase Search, Read File, Terminal
+- **Restrictions**: Edit tools disabled
+- **Guardrails**: Documentation only, no code changes, absolute paths required
+- **Output**: PR-{TASK-CODE}.md files
+
+#### Verification and Switching
+
+- Test each mode with safe commands (e.g., `git status`)
+- Verify guardrails prevent unauthorized actions
+- Use separate chat sessions to maintain context isolation
+
 ### Best Practices for Cursor Integration
 
 - **Use separate chat sessions** for each mode to prevent context contamination
 - **Enable file context** so assistants can read your codebase structure
 - **Keep prompts updated** in your project for version control
 - **Use absolute paths** when the assistant creates files for reliability
+- **Leverage Custom Modes** for consistent tool restrictions and safety
 
 ## 🆘 Troubleshooting
 

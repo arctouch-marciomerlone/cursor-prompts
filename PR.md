@@ -14,15 +14,16 @@ git add PR.md && git commit -m "docs: update pr documentation for semantic asset
 
 ## Changes Description
 
-Enhanced the AI Task Management Assistant Prompts repository with comprehensive documentation improvements and semantic asset organization. The README.md now provides detailed Cursor integration instructions, workflow examples, and troubleshooting guidance. All asset files have been replaced with semantically meaningful names that clearly indicate their content and purpose.
+Enhanced the AI Task Management Assistant Prompts repository with comprehensive documentation improvements and semantic asset organization. The README.md now provides detailed Cursor integration instructions, workflow examples, troubleshooting guidance, and step-by-step Custom Mode setup instructions with official Cursor documentation references. All asset files have been replaced with semantically meaningful names that clearly indicate their content and purpose.
 
 **Repository:** AI Task Management Assistant Prompts - cursor-prompts
 
 ## Changelog
 
 - **docs:** Comprehensive README.md enhancement with Cursor setup instructions and visual guides
+- **docs:** Added Custom Mode setup instructions with official Cursor documentation references
 - **refactor:** Asset file organization with semantic, descriptive filenames
-- **docs:** Updated PR documentation to reflect semantic asset transition
+- **docs:** Updated PR documentation to reflect semantic asset transition and Custom Mode addition
 
 ## Key Changes
 
@@ -32,6 +33,8 @@ Enhanced the AI Task Management Assistant Prompts repository with comprehensive 
 - Included comprehensive workflow examples with real output samples
 - Enhanced troubleshooting section with Cursor-specific guidance
 - Added visual documentation structure with meaningful asset references
+- **NEW**: Step-by-step Custom Mode setup instructions with tool restrictions and guardrails
+- **NEW**: Official Cursor documentation references for modes configuration
 
 ### Asset Organization
 
