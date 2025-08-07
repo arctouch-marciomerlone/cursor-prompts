@@ -68,7 +68,7 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 1. **Task Init Mode Setup**
 
-![Task Init Setup](assets/Screenshot%202025-08-07%20at%202.27.26%20PM.png)
+![Task Init Setup](assets/task-init-setup.png)
 
 1. Open Cursor's AI chat panel
 2. Copy the entire content of `task-init-assistant.txt`
@@ -77,7 +77,7 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 2. **Code Review Mode Setup**
 
-![Code Review Setup](assets/Screenshot%202025-08-07%20at%202.27.33%20PM.png)
+![Code Review Setup](assets/code-review-setup.png)
 
 1. Switch to a new chat session in Cursor
 2. Load the `code-review.txt` prompt content
@@ -86,7 +86,7 @@ The AI Task Management Assistant prompts are designed to work seamlessly with Cu
 
 #### 3. **Task Wrapper Mode Setup**
 
-![Task Wrapper Setup](assets/Screenshot%202025-08-07%20at%202.27.39%20PM.png)
+![Task Wrapper Setup](assets/task-wrapper-setup.png)
 
 1. Open a fresh chat session for final documentation
 2. Use the `task-wrapper.txt` prompt
@@ -101,7 +101,7 @@ The assistants work together seamlessly - task init creates plans, code review v
 
 ### Basic Workflow
 
-![Workflow Overview](assets/Screenshot%202025-08-07%20at%203.35.29%20PM.png)
+![Workflow Overview](assets/workflow-overview.png)
 
 1. **Initialize Task**
 
@@ -135,7 +135,7 @@ The assistants work together seamlessly - task init creates plans, code review v
 
 ### Advanced Cursor Integration
 
-![Advanced Integration](assets/Screenshot%202025-08-07%20at%203.36.15%20PM.png)
+![Advanced Integration](assets/automated-file-operations.png)
 
 #### **Smart Context Switching**
 
@@ -145,7 +145,7 @@ The assistants work together seamlessly - task init creates plans, code review v
 
 #### **Automated File Operations**
 
-![File Operations](assets/Screenshot%202025-08-07%20at%203.36.48%20PM.png)
+![File Operations](assets/mode-integration.png)
 
 - All assistants use absolute paths for safe file creation
 - Generated files appear directly in your project structure
