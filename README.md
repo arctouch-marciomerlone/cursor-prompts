@@ -165,8 +165,6 @@ _Part 3: Complete task documentation workflow showing PR description and additio
 
 #### **Automated File Operations**
 
-![Prompt Integration Demo](assets/prompt-integration-demo.png)
-
 - All assistants use absolute paths for safe file creation
 - Generated files appear directly in your project structure
 - Cursor's file explorer shows the new documentation files immediately
